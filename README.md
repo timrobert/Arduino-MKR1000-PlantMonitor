@@ -57,19 +57,20 @@ The steps for this start here:
 ## Setting up the Board
 
 You can read about installing and working with libraries here: https://www.arduino.cc/en/Guide/Libraries
+
 The key steps are outlined below:
 
   1. Add WiFi to your project.
-    * Sketch>Include Library>WiFi
-    * File>Save
+      * Sketch>Include Library>WiFi
+      * File>Save
 
   2. Add the RTCzero Library
-    * This one needs to be installed from the Library Manager first.
-    * Sketch>Include Library>Manage Libraries...
-    * In the 'Filter You Search' box at the top, enter **RTCzero**
-    * Click the option "RTCzero by Arduino"
-    * Confirm that that it says "For .... MKR1000" in the description
-    * Select the most recent version and click **Install**
+      * This one needs to be installed from the Library Manager first.
+      * Sketch>Include Library>Manage Libraries...
+      * In the 'Filter Your Search' box at the top, enter **RTCzero**
+      * Click the option "RTCzero by Arduino"
+      * Confirm that that it says "For .... MKR1000" in the description
+      * Select the most recent version and click **Install**
 
   3.  Click 'Close'
 
