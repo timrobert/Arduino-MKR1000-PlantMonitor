@@ -76,7 +76,7 @@ The key steps are outlined below:
 
   4. Sketch>Include Library>RTCzero
 
-  5. You sketch should now have the following code at the top:
+  5. Your sketch should now have the following code at the top:
   ```
   #include <RTCZero.h>
 
@@ -91,4 +91,59 @@ The key steps are outlined below:
 
   6. File>Save
 
-##
+## Starting our code
+
+The lab at the website starts with setting up external site accounts and HTTP requests.
+I think those things are cool, but let's do that later.  No need to get complicated early.
+
+**NOTE** Does this code look a little different than code you may have written before?
+That's because it is C.  If you want to learn more about C you can do that here: http://www.learn-c.org/en/
+C is a a great programming language to learn with, it makes you do all the work.
+This may seem bad, but it also means you learn memory management better.  And many modern languages are "c-based" just like many spoken languages are "latin based".  You can see a family-tree of a majority of programming languages here: https://blogs.ucl.ac.uk/ucl-student-blog/a-brief-history-of-programming-languages-a-review-of-codes-that-changed-the-world/
+
+**NOTE 2** Why choose one programming language over another?  Each language has certain things that it is best at.  Just like Darwins finches they each evolved to do something slightly better.  Many small platforms with limited memory still run on C because you can write small and efficient programs with it - a great benefit when you don't have much computing power to work with, like on a small Arduino board.
+
+### Hello World!
+
+Every computer program starts with a basic "Hello World!".  We use this to show that we have the program running and can print human readable output - that we can tell the computer things and it can tell us things.
+
+**Note** Comments in code are lines that are surrounded in ```/* This is a comment */``` or started with ```// This is a comment ``` we use these types of lines in code to leave ourselves little notes about what the program is doing.  The rule is to leave as many comments as are necessary.  If you have a small program and are an experienced programmer you may not need comments, but if you are new write TONS of comments for yourself. *I am going to write many comments so you know what is going on, so watch closely for them*
+
+# This is needed to update the WiFi Sheild https://www.arduino.cc/en/Tutorial/FirmwareUpdater
+
+Copy Paste this code into your Arduino editor.
+```
+/* These are header includes we don't need them at the moment,
+ * but we added them in the earlier steps so I left them.  
+ * These headers are little libraries of code someone else has written and tested that we can use!
+ */
+#include <RTCZero.h>
+#include <WiFi.h>
+#include <WiFiUdp.h>
+#include <WiFiClient.h>
+#include <WiFiServer.h>
+
+/*The first method called.
+ * This method is called once at the start of the app running.
+ * It is used to setup and initialize connections and things
+ * needed in the program.
+ */
+void setup() {
+  Serial.begin(9600);
+  while (!Serial) {
+   delay(2000);
+  }
+
+  Serial.println("Plant Communicator 1.0 Running!");
+  Serial.println("Begin setup...");
+    //We will put setup steps here later.
+  Serial.println("Setup complete!");
+}
+
+/*The main body of our program
+ * It will run over and over until we tell it to stop.
+ */
+void loop() {
+  // put your main code here, to run repeatedly:
+}
+```
